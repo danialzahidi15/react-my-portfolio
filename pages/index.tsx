@@ -1,28 +1,24 @@
 import Head from "next/head";
 import { BsFillMoonStarsFill } from "react-icons/bs";
-import {
-  AiFillTwitterCircle,
-  AiFillLinkedin,
-  AiFillYoutube,
-} from "react-icons/ai";
+import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import Image from "next/image";
 import deved from "../public/dev-ed-wave.png";
-import design from "../public/design.png";
-import code from "../public/code.png";
-import consulting from "../public/consulting.png";
-import web1 from "../public/web1.png";
-import web2 from "../public/web2.png";
-import web3 from "../public/web3.png";
-import web4 from "../public/web4.png";
-import web5 from "../public/web5.png";
-import web6 from "../public/web6.png";
 import { useState } from "react";
+import Modal from "./modal";
+import Link from "next/link";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
+  const [modal, setModal] = useState(false);
+
   const handleDarkMode = () => {
     setDarkMode(!darkMode);
-  }
+  };
+
+  const handleModal = () => {
+    setModal(!modal);
+  };
+
   return (
     <>
       <div className={darkMode ? "dark" : ""}>
@@ -33,16 +29,19 @@ export default function Home() {
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
-        <main className="bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900">
+        <main className="bg-gray-100 mx-auto dark:bg-black">
           <section className="min-h-screen">
-            <nav className="py-10 mb-12 flex justify-between">
-              <h1 className="text-xl font-mono">developedbyden</h1>
+            <nav className="py-5  flex justify-between px-1 lg:px-10 bg-slate-700 dark:bg-black">
+              <h1 className="text-xl font-mono dark:text-gray-400">thisis<span className="text-red-500">danial</span></h1>
               <ul className="flex items-center">
                 <li>
-                  <BsFillMoonStarsFill onClick={handleDarkMode} className="cursor-pointer text-2xl" />
+                  <BsFillMoonStarsFill
+                    onClick={handleDarkMode}
+                    className="cursor-pointer text-2xl dark:text-white"
+                  />
                 </li>
                 <li>
-                  <a
+                  <a 
                     className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8"
                     href="#"
                   >
@@ -52,154 +51,27 @@ export default function Home() {
               </ul>
             </nav>
 
-            <div className="text-center p-10">
-              <h2 className="text-5xl text-teal-600 font-medium md:text-6xl">
-                Danial Zahidi
-              </h2>
-              <h3 className="text-2xl py-2 md:text-3xl">Frontend developer</h3>
-              <p className="text-md py-5 leading-8 text-gray-700 md:text-xl max-w-xl mx-auto">
-                Seeking a Junior Frontend Developer position to utilize my
-                skills and contribute to the team while learning from the
-                industry-software company.
-              </p>
+            <div className="grid items-center justify-center md:p-auto lg:p-10">
+              <div className="">
+                <h2 className="text-5xl text-teal-600 font-medium md:text-6xl">
+                  Danial Zahidi
+                </h2>
+                <h3 className="text-2xl py-2 md:text-3xl dark:text-white">
+                  Frontend developer
+                </h3>
+                <p className="text-md py-5 leading-8 text-gray-700 md:text-xl max-w-xl">
+                  Seeking a Junior Frontend Developer position to utilize my
+                  skills and contribute to the team while learning from the
+                  industry-software company.
+                </p>
+              </div>
             </div>
-            <div className="text-5xl flex justify-center text-gray-600 gap-16 py-3">
-              <AiFillTwitterCircle />
-              <AiFillLinkedin />
-              <AiFillYoutube />
+            <div className="text-5xl flex justify-center text-gray-600 gap-12 py-3">
+              <Link href={""}><AiFillLinkedin /></Link>
+              <Link target={"_blank"} className="" href={"https://github.com/danialzahidi15"}><AiFillGithub /></Link>
             </div>
-            <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full h-80 w-80 mt-20 overflow-hidden md:h-96 md:w-96">
-              <Image src={deved} alt="" fill style={{ objectFit: "cover" }} />
-            </div>
-          </section>
 
-          <section>
-            <div>
-              <h3 className="text-3xl py-1">Services I offer</h3>
-              <p className="text-md py-2 leading-8 text-gray-700">
-                Since the beginning of my journey as a freelance designer and
-                developer, I've done remote for{" "}
-                <span className="text-teal-500">agencies</span> consulted for{" "}
-                <span className="text-teal-500">statup</span> and collaborated
-                with talented people to create digital products for both
-                business and consumer use.
-              </p>
-              <p className="text-md py-2 text-gray-700">
-                I offer form a wide range of services, including brand design,
-                programming and teaching
-              </p>
-            </div>
-            <div className="lg:flex gap-10">
-              <div className="text-center shadow-lg rounded-xl p-10 my-10">
-                <Image src={design} alt="" width={100} height={100} />
-                <h3 className="text-lg font-medium">Beutiful Design</h3>
-                <p className="py-2">
-                  Creating elegant designs suited for your needs following core
-                  design theory.
-                </p>
-                <h4 className="text-teal-500 py-4">Design tools I use</h4>
-                <p className="text-gray-700 py-1">Photoshop</p>
-                <p className="text-gray-700 py-1">Illustrator</p>
-                <p className="text-gray-700 py-1">Figma</p>
-              </div>
-              <div className="text-center shadow-lg rounded-xl p-10 my-10">
-                <Image src={consulting} alt="" width={100} height={100} />
-                <h3 className="text-lg font-medium">Beutiful Design</h3>
-                <p className="py-2">
-                  Creating elegant designs suited for your needs following core
-                  design theory.
-                </p>
-                <h4 className="text-teal-500 py-4">Design tools I use</h4>
-                <p className="text-gray-700 py-1">Photoshop</p>
-                <p className="text-gray-700 py-1">Illustrator</p>
-                <p className="text-gray-700 py-1">Figma</p>
-              </div>
-              <div className="text-center shadow-lg rounded-xl p-10 my-10">
-                <Image src={code} alt="" width={100} height={100} />
-                <h3 className="text-lg font-medium">Beutiful Design</h3>
-                <p className="py-2">
-                  Creating elegant designs suited for your needs following core
-                  design theory.
-                </p>
-                <h4 className="text-teal-500 py-4">Design tools I use</h4>
-                <p className="text-gray-700 py-1">Photoshop</p>
-                <p className="text-gray-700 py-1">Illustrator</p>
-                <p className="text-gray-700 py-1">Figma</p>
-              </div>
-            </div>
-          </section>
-          <section>
-            <div>
-              <h3 className="text-3xl py-1">Portofolio</h3>
-              <p className="text-md py-2 leading-8 text-gray-700">
-                Since the beginning of my journey as a freelance designer and
-                developer, I've done remote for{" "}
-                <span className="text-teal-500">agencies</span> consulted for{" "}
-                <span className="text-teal-500">statup</span> and collaborated
-                with talented people to create digital products for both
-                business and consumer use.
-              </p>
-              <p className="text-md py-2 text-gray-700">
-                I offer form a wide range of services, including brand design,
-                programming and teaching
-              </p>
-            </div>
-            <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
-              <div className="basis-1/3 flex-1">
-                <Image
-                  src={web1}
-                  alt=""
-                  className="rounded-lg object-cover"
-                  w-full
-                  h-full
-                />
-              </div>
-              <div className=" basis-1/3 flex-1">
-                <Image
-                  src={web2}
-                  alt=""
-                  className="rounded-lg object-cover"
-                  w-full
-                  h-full
-                />
-              </div>
-              <div className=" basis-1/3 flex-1">
-                <Image
-                  src={web3}
-                  alt=""
-                  className="rounded-lg object-cover"
-                  w-full
-                  h-full
-                />
-              </div>
-              <div className=" basis-1/3 flex-1">
-                <Image
-                  src={web4}
-                  alt=""
-                  className="rounded-lg object-cover"
-                  w-full
-                  h-full
-                />
-              </div>
-              <div className=" basis-1/3 flex-1">
-                <Image
-                  src={web5}
-                  alt=""
-                  className="rounded-lg object-cover"
-                  w-full
-                  h-full
-                />
-              </div>
-              <div className=" basis-1/3 flex-1">
-                <Image
-                  src={web2}
-                  alt=""
-                  className="rounded-lg object-cover"
-                  w-full
-                  h-full
-                />
-              </div>
-            </div>
+            <Modal />
           </section>
         </main>
       </div>

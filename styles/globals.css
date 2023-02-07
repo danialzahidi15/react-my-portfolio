@@ -18,3 +18,58 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+a:hover {
+  /* color: inherit; */
+  text-decoration: underline;
+}
+
+@layer components {
+  .marginSection {
+    @apply px-10 py-2;
+  }
+
+  h3 {
+    @apply text-gray-400 my-5;
+  }
+
+  h4 {
+    @apply text-gray-300 text-xs;
+  }
+
+  h5 {
+    @apply text-[#58a6ff] text-sm py-2;
+  }
+
+  .text {
+    @apply text-gray-400 my-2 pb-5;
+  }
+
+  .jobsSection {
+    @apply flex gap-5 items-center py-3 border-b-2 border-gray-800;
+  }
+
+  .companyImage {
+    @apply bg-white w-16 h-16 rounded-full overflow-hidden;
+  }
+
+  .codeArea {
+    @apply flex items-center gap-2 bg-gray-800 px-2 py-1 rounded-md;
+  }
+
+  .codeImage {
+    @apply relative bg-white h-5 w-5 rounded-full overflow-hidden;
+  }
+
+  .year {
+    @apply text-xs text-gray-400;
+  }
+
+  .repoList {
+    @apply relative border-b-2 border-gray-800 mr-10;
+  }
+
+  .iconRepo {
+    @apply flex items-center gap-1;
+  }
+}
