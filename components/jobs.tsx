@@ -10,7 +10,7 @@ function JobExperiences() {
       <section className="">
         <h3>Experiences</h3>
         <div className="jobsSection">
-          <div className="relative flex item-center justify-center companyImage">
+          <div className="hidden relative md:flex item-center justify-center companyImage">
             <Image src={KestrlLogo} alt=""></Image>
           </div>
           <div>
@@ -22,7 +22,7 @@ function JobExperiences() {
           </div>
         </div>
         <div className="jobsSection">
-          <div className="relative flex item-center justify-center companyImage">
+          <div className="hidden relative md:flex item-center justify-center companyImage">
             <Image src={PanasonicLogo} alt="" fill style={{objectFit: 'contain'}}></Image>
           </div>
           <div>
@@ -34,7 +34,7 @@ function JobExperiences() {
           </div>
         </div>
         <div className="jobsSection">
-          <div className="relative flex item-center justify-center companyImage">
+          <div className="hidden relative md:flex item-center justify-center companyImage">
           <Image src={KwangLiLogo} alt="" fill style={{objectFit: 'cover'}}></Image>
           </div>
           <div>

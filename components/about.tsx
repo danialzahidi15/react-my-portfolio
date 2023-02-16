@@ -1,22 +1,37 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import createClient from "../pages/client";
 
 function About() {
+  const [detailData, setDetail] = useState<any[]>([]);
+
+  useEffect(() => {
+    createClient
+      .fetch(
+        `*[_type == "detail"]{
+      greeting,
+      title,
+      firstParagraph,
+      secondParagraph,
+    }`
+      )
+      .then((data) => setDetail(data))
+      .catch(console.error);
+  }, []);
+
   return (
     <div className="marginSection">
-      <section className="">
-        <h3 className="text-gray-400 my-5">About</h3>
-        <h2 className="text-white font-semibold">
-          Hi, I'm <span>Danial</span>
-        </h2>
-        <p className="text-white my-2">Great to see you here.</p>
-        <p className="text">I am a self-taught frontend developer.</p>
-        <p className="text border-b-2 border-gray-600">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus vitae
-          vel voluptate aliquid voluptatem, rerum iure itaque dicta minima
-          dolores ut iste libero nihil est maxime error aperiam repellendus
-          eius?
-        </p>
-      </section>
+      {detailData &&
+        detailData.map((detail) => (
+          <section className="">
+            <h3 className="text-gray-400 my-5">About</h3>
+            <h2 className="text-white font-semibold">{detail.greeting}</h2>
+            <p className="text-white my-2">{detail.title}</p>
+            <p className="text">{detail.firstParagraph}</p>
+            <p className="text border-b-2 pb-5 border-gray-800">
+              {detail.secondParagraph}
+            </p>
+          </section>
+        ))}
     </div>
   );
 }

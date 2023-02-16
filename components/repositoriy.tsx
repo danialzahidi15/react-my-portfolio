@@ -18,9 +18,9 @@ function Repositories() {
         <section className="repoList">
           <div className="flex items-center gap-2">
             <GoRepo className="text-white" />
-            <h5><a href="#">admin-dashboard</a></h5>
+            <h5><a target={"_blank"} href="https://github.com/danialzahidi15/admin-dashboard">admin-dashboard</a></h5>
           </div>
-          <p className="text-gray-400 text-xs py-3">EGATOR admin dashboard</p>
+          <p className="text-gray-400 text-xs py-3">UI for Admin Dashboard</p>
           <div className="flex items-center text-gray-400 py-7 gap-5">
             <div className="flex items-center gap-1">
                 <div className="bg-purple-500 w-3 h-3 rounded-full"></div>
@@ -33,9 +33,9 @@ function Repositories() {
         <section className="repoList">
           <div className="flex items-center gap-2">
             <GoRepo className="text-white" />
-            <h5><a href="#">countdown-timer</a></h5>
+            <h5><a target={"_blank"} href="https://github.com/danialzahidi15/countdown-timer">countdown-timer</a></h5>
           </div>
-          <p className="text-gray-400 text-xs py-3">Florin Pop Countdown Timer</p>
+          <p className="text-gray-400 text-xs py-3">Countdown Timer</p>
           <div className="flex items-center text-gray-400 py-7 gap-5">
             <div className="flex items-center gap-1">
                 <div className="bg-yellow-500 w-3 h-3 rounded-full"></div>
@@ -48,7 +48,7 @@ function Repositories() {
         <section className="repoList">
           <div className="flex items-center gap-2">
             <GoRepo className="text-white" />
-            <h5><a href="#">flutter-calculator-app</a></h5>
+            <h5><a target={"_blank"} href="https://github.com/danialzahidi15/flutter-calculator-app">flutter-calculator-app</a></h5>
           </div>
           <p className="text-gray-400 text-xs py-3">Flutter Calculator App</p>
           <div className="flex items-center text-gray-400 py-7 gap-5">
@@ -63,7 +63,7 @@ function Repositories() {
         <section className="repoList">
           <div className="flex items-center gap-2">
             <GoRepo className="text-white" />
-            <h5><a href="#">quiz-app</a></h5>
+            <h5><a target={"_blank"} href="https://github.com/danialzahidi15/quiz-app">quiz-app</a></h5>
           </div>
           <p className="text-gray-400 text-xs py-3">Florin Pop Quiz Pop</p>
           <div className="flex items-center text-gray-400 py-7 gap-5">
@@ -74,9 +74,9 @@ function Repositories() {
         <section className="repoList">
           <div className="flex items-center gap-2">
             <GoRepo className="text-white" />
-            <h5><a href="#">react-my-portfolio</a></h5>
+            <h5><a target={"_blank"} href="https://github.com/danialzahidi15/react-my-portfolio">react-my-portfolio</a></h5>
           </div>
-          <p className="text-gray-400 text-xs py-3">Portfolio</p>
+          <p className="text-gray-400 text-xs py-3">Build Portfolio Website with Sanity.io</p>
           <div className="flex items-center text-gray-400 py-7 gap-5">
             <div className="flex items-center gap-1">
                 <div className="bg-blue-500 w-3 h-3 rounded-full"></div>
@@ -89,9 +89,9 @@ function Repositories() {
         <section className="repoList">
           <div className="flex items-center gap-2">
             <GoRepo className="text-white" />
-            <h5><a href="#">recipe-food-app</a></h5>
+            <h5><a target={"_blank"} href="https://github.com/danialzahidi15/recipe-food-app">recipe-food-app</a></h5>
           </div>
-          <p className="text-gray-400 text-xs py-3">Florin Pop Recipe Food App</p>
+          <p className="text-gray-400 text-xs py-3">Recipe Food with MealDB API</p>
           <div className="flex items-center text-gray-400 py-7 gap-5">
             <div className="flex items-center gap-1">
                 <div className="bg-yellow-500 w-3 h-3 rounded-full"></div>
